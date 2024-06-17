@@ -66,23 +66,23 @@ function Home() {
       </div>
       <div className="flex flex-col items-center text-center">
         <div className="flex flex-col my-16 gap-3">
-          <h3 className="text-[#4343EF] text-[19px] font-semibold">
+          <h3 className="text-[#4343EF] text-base lg:text-[19px] font-semibold">
             OPEN ROOM & PRIVATE ROOM
           </h3>
-          <h2 className="font-semibold text-[40px] text-black">
+          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[40px] text-black">
             Présentation des rooms de discussion
           </h2>
         </div>
         <div className="w-full">
           <div className="flex flex-col items-center lg:items-start lg:flex-row justify-center w-full gap-3 lg:gap-0">
-            <div className="flex flex-col w-1/2 lg:w-[21%] items-center lg:items-start gap-3">
-              <h3 className="font-medium sm:text-xl md:text-2xl lg:text-3xl cursor-pointer">
+            <div className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-start gap-3">
+              <h3 className="font-medium text-base sm:text-xl md:text-2xl lg:text-3xl cursor-pointer">
                 Discussions dans les rooms
               </h3>
               <span className="w-full h-1 flex bg-[#C4C4C4]"></span>
             </div>
-            <div className="flex flex-col w-1/2 lg:w-[21%] items-center lg:items-end gap-3">
-              <h3 className="font-medium sm:text-xl md:text-2xl lg:text-3xl cursor-pointer">
+            <div className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-end gap-3">
+              <h3 className="font-medium text-base sm:text-xl md:text-2xl lg:text-3xl cursor-pointer">
                 Visionnage d’une rooms
               </h3>
               <span className="w-full h-1 flex bg-[#C4C4C4]"></span>
@@ -92,7 +92,7 @@ function Home() {
             <div>
               <img src={Images.InRoomTalk} alt="" className="mt-20 lg:ml-24" />
             </div>
-            <div className="w-4/5 lg:w-[672px] h-[446px] border border-[#52525B80] rounded-2xl lg:ml-24 flex items-center flex-col lg:items-start">
+            <div className="w-4/5 lg:w-[672px] h-auto min-h-[446px] border border-[#52525B80] rounded-2xl lg:ml-24 flex items-center flex-col lg:items-start">
               <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start">
                 <span className="text-[#444444]">Une open room</span> est une
                 room dans laquelle une discussion à lieu avec un nombre
@@ -108,7 +108,7 @@ function Home() {
               </p>
               <CustomButton
                 text="Je m'inscris"
-                customStyles="bg-[#211BBF] w-[205px] h-[64px] text-white text-xl flex-start flex items-center justify-center lg:ml-20"
+                customStyles="bg-[#211BBF] w-[205px] h-[64px] text-white text-xl flex-start flex items-center justify-center mb-5 md:mb-0 lg:ml-20"
               />
             </div>
           </div>
@@ -116,10 +116,10 @@ function Home() {
       </div>
       <div className="w-full bg-[#F5F5F5]">
         <div className="flex flex-col items-center py-20">
-          <h3 className="text-[#4343EF] font-semibold text-[19px]">
+          <h3 className="text-[#4343EF] font-semibold text-base md:text-[19px]">
             Avatar YDENN
           </h3>
-          <h2 className="text-[#24242E] text-[29px] font-bold">
+          <h2 className="text-[#24242E] text-xl md:text-[29px] font-bold">
             Créer votre propre avatar
           </h2>
         </div>
