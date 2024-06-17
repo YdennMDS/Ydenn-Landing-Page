@@ -1,19 +1,19 @@
 function Footer() {
   return (
     <footer className="w-full min-h-[420px] h-auto bg-black flex flex-col lg:flex-row justify-around items-center text-white">
-      <div className="flex flex-row items-center lg:items-start lg:flex-col gap-10 lg:gap-0">
-        <div className="">
+      <div className="flex flex-row items-center lg:items-start lg:flex-col gap-3 sm:gap-5 md:gap-10 lg:gap-0">
+        <div>
           <img className="w-24" src="/logo_ydenn.png" alt="" />
         </div>
-        <div className="w-[296px] mt-2">
+        <div className="sm:w-[296px] mt-2">
           <p className="text-white font-normal text-sm text-center lg:text-start sm:text-base">
             Un espace en ligne où les individus peuvent échanger en participant
             à des discussions profondes et variées
           </p>
         </div>
-        <div className="lg:mt-12 flex flex-row">
+        <div className="lg:mt-12 flex flex-col gap-3 sm:gap-0 items-center sm:flex-row">
           <svg
-            className="mx-2 cursor-pointer"
+            className="mx-2 cursor-pointer w-5 sm:w-auto"
             xmlns="http://www.w3.org/2000/svg"
             width="28"
             height="37"
@@ -26,7 +26,7 @@ function Footer() {
             />
           </svg>
           <svg
-            className="mx-2 cursor-pointer"
+            className="mx-2 cursor-pointer w-5 sm:w-auto"
             xmlns="http://www.w3.org/2000/svg"
             width="43"
             height="38"
@@ -39,7 +39,7 @@ function Footer() {
             />
           </svg>
           <svg
-            className="mx-2 cursor-pointer"
+            className="mx-2 cursor-pointer w-5 sm:w-auto"
             xmlns="http://www.w3.org/2000/svg"
             width="37"
             height="37"
@@ -54,24 +54,24 @@ function Footer() {
         </div>
       </div>
       <div className="footer-col2">
-        <ul className="gap-10 flex flex-row lg:flex-col">
-          <li className="font-bold">Légal</li>
-          <li>Conditions d'utilisation</li>
-          <li>Mention Légales</li>
+        <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
+          <li className="font-bold text-xs sm:text-base">Légal</li>
+          <li className="text-xs sm:text-base">Conditions d'utilisation</li>
+          <li className="text-xs sm:text-base">Mention Légales</li>
         </ul>
       </div>
       <div className="footer-col3">
-        <ul className="gap-10 flex flex-row lg:flex-col">
-          <li className="font-bold">Menu</li>
-          <li>La plateforme</li>
-          <li>Les Rooms</li>
+        <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
+          <li className="font-bold text-xs sm:text-base">Menu</li>
+          <li className="text-xs sm:text-base">La plateforme</li>
+          <li className="text-xs sm:text-base">Les Rooms</li>
         </ul>
       </div>
       <div className="footer-col4">
-        <ul className="gap-10 flex flex-row lg:flex-col">
-          <li className="font-bold">Contact</li>
-          <li>ydenn.contact@gmail.com</li>
-          <li>Numéro de téléphone</li>
+        <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
+          <li className="font-bold text-xs sm:text-base">Contact</li>
+          <li className="text-xs sm:text-base">ydenn.contact@gmail.com</li>
+          <li className="text-xs sm:text-base">Numéro de téléphone</li>
         </ul>
       </div>
     </footer>

@@ -16,11 +16,11 @@ function Home() {
             alt=""
             className="absolute -z-10 top-[420px] left-[68px]"
           />
-          <div className="h-[425px] w-[587px] flex flex-col items-center lg:items-start">
-            <h1 className="font-medium text-2xl lg:text-[40px] leading-10 text-center lg:text-start">
+          <div className="h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
+            <h1 className="font-medium text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-10 text-center lg:text-start">
               YDENN, une plateforme de discussion qui révolutionne le débat{" "}
             </h1>
-            <p className="font-normal text-sm mx-20 lg:mx-0 lg:text-xl my-12 text-center lg:text-start">
+            <p className="font-normal text-sm mx-2 md:mx-20 lg:mx-0 lg:text-xl my-12 text-center lg:text-start">
               Une plateforme accessible à tous de manière anonyme et sécurisée,
               afin de permettre à chacun de vivre une expérience de réseau
               social centrée sur la qualité des échanges
@@ -165,15 +165,15 @@ function Home() {
           method="POST"
           className="flex flex-col items-center gap-5 py-20 bg-[#FFFFFF] w-4/5 rounded-2xl"
         >
-          <div className="section-form-informations w-full lg:w-1/3 ml-8">
-            <h2 className="text-[36px] font-semibold text-[#101828]">
+          <div className="w-full lg:w-1/3 ml-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold text-[#101828]">
               Inscrivez vous
             </h2>
-            <h4 className="font-medium text-[#565C69] my-5 w-96">
+            <h4 className="font-medium text-[#565C69] text-sm sm:text-base md:text-lg lg:text-xl my-5 w-full">
               Soyez le premier prévenu lors du lancement de l’application
             </h4>
           </div>
-          <div className="flex flex-row gap-8 w-4/5 md:w-auto">
+          <div className="flex flex-col md:flex-row gap-8 w-4/5 md:w-auto">
             <label className="font-medium text-sm text-[#344054] flex flex-col gap-2">
               Prénom
               <input
