@@ -1,0 +1,10 @@
+{
+  "openRoom": {
+    "text": "Une open room est une room dans laquelle une discussion à lieu avec un nombre d’utilisateurs définis pouvant interagir et le reste des utilisateurs non inscrit peuvent quant à eux assister à l'échange sans écrire et cette fois sans limite.",
+    "image": "InRoomTalk"
+  },
+  "privateRoom": {
+    "text": "Une private room est une room privé lancé par un utilisateur et ses abonnées. Seuls ces derniers y ont accès. Le but, créer des espaces d’échanges entre amis sur des thèmes et créneaux choisis.",
+    "image": "SeenRoom"
+  }
+}

@@ -8,7 +8,20 @@ import Initiateur from "../assets/initiateur.svg";
 import Mediateur from "../assets/mediateur.svg";
 import SeenRoom from "../assets/seenRoom.svg";
 
-export default {
+interface Images {
+  [key: string]: string;
+  logo_ydenn: string;
+  Illustration1: string;
+  Dot: string;
+  InRoomTalk: string;
+  SeenRoom: string;
+  Curieux: string;
+  Initiateur: string;
+  Discret: string;
+  Mediateur: string;
+}
+
+const images: Images = {
   logo_ydenn,
   Illustration1,
   Dot,
@@ -19,3 +32,5 @@ export default {
   Discret,
   Mediateur,
 };
+
+export default images;

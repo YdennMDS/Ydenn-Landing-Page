@@ -1,11 +1,17 @@
+import { useState } from "react";
 import CustomButton from "../components/CustomButton";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import AvatarCard from "../components/avatarCard";
 import Icons from "../constants/Icons";
 import Images from "../constants/Images";
+import roomData from "../data/roomData.json";
 
 function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const roomInfo = isOpen ? roomData.openRoom : roomData.privateRoom;
+
   return (
     <div>
       <Header />
@@ -73,24 +79,42 @@ function Home() {
             Présentation des rooms de discussion
           </h2>
         </div>
-        <div className="w-full">
+        <div className="w-full pb-10 lg:pb-0">
           <div className="flex flex-col items-center lg:items-start lg:flex-row justify-center w-full gap-3 lg:gap-0">
-            <div className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-start gap-3">
+            <div
+              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-start gap-3"
+              onClick={() => setIsOpen(false)}
+            >
               <h3 className="font-medium text-base sm:text-xl md:text-2xl lg:text-3xl cursor-pointer">
                 Discussions dans les rooms
               </h3>
-              <span className="w-full h-1 flex bg-[#C4C4C4]"></span>
+              <span
+                className={`w-full h-1 flex ease-out transition-all ${
+                  isOpen ? "bg-[#C4C4C4]" : "bg-[#211BBF]"
+                }`}
+              ></span>
             </div>
-            <div className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-end gap-3">
+            <div
+              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-end gap-3"
+              onClick={() => setIsOpen(true)}
+            >
               <h3 className="font-medium text-base sm:text-xl md:text-2xl lg:text-3xl cursor-pointer">
                 Visionnage d’une rooms
               </h3>
-              <span className="w-full h-1 flex bg-[#C4C4C4]"></span>
+              <span
+                className={`w-full h-1 flex ease-out transition-all duration-500 ${
+                  isOpen ? "bg-[#211BBF]" : "bg-[#C4C4C4]"
+                }`}
+              ></span>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-center items-center">
             <div>
-              <img src={Images.InRoomTalk} alt="" className="mt-20 lg:ml-24" />
+              <img
+                src={Images[roomInfo.image]}
+                alt=""
+                className="mt-20 lg:ml-24"
+              />
             </div>
             <div className="w-4/5 lg:w-[672px] h-auto min-h-[446px] border border-[#52525B80] rounded-2xl lg:ml-24 flex items-center flex-col lg:items-start">
               <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start">
@@ -152,7 +176,7 @@ function Home() {
         <div className="flex justify-center py-20 pb-40">
           <CustomButton
             text="Je commence le test"
-            customStyles="bg-[#211BBF] w-[301px] h-[64px] text-white text-xl flex items-center justify-center"
+            customStyles="bg-[#211BBF] w-[220px] lg:w-[301px] h-[64px] text-white text-xl flex items-center justify-center"
           />
         </div>
       </div>
@@ -165,7 +189,7 @@ function Home() {
           method="POST"
           className="flex flex-col items-center gap-5 py-20 bg-[#FFFFFF] w-4/5 rounded-2xl"
         >
-          <div className="w-full lg:w-1/3 ml-8">
+          <div className="w-4/5 lg:w-1/3 lg:ml-8">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold text-[#101828]">
               Inscrivez vous
             </h2>
@@ -216,7 +240,7 @@ function Home() {
               className="border border-[#D0D5DD] w-full md:w-[480px] h-[128px] rounded-lg resize-none"
             ></textarea>
           </label>
-          <label className="font-normal text-base text-[#667085] w-full lg:w-1/3 ml-7">
+          <label className="font-normal text-base text-[#667085] w-4/5 lg:w-1/3 lg:pl-4">
             <input
               type="checkbox"
               name="checkform"
