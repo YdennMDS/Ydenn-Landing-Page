@@ -1,10 +1,16 @@
 {
   "openRoom": {
-    "text": "Une open room est une room dans laquelle une discussion à lieu avec un nombre d’utilisateurs définis pouvant interagir et le reste des utilisateurs non inscrit peuvent quant à eux assister à l'échange sans écrire et cette fois sans limite.",
-    "image": "InRoomTalk"
+    "starting": "Une open room",
+    "text": "est une room dans laquelle une discussion à lieu avec un nombre d’utilisateurs définis pouvant interagir et le reste des utilisateurs non inscrit peuvent quant à eux assister à l'échange sans écrire et cette fois sans limite.",
+    "text2": "est une room privé lancé par un utilisateur et ses abonnées. Seuls ces derniers y ont accès. Le but, créer des espaces d’échanges entre amis sur des thèmes et créneaux choisis.",
+    "starting2": "Une private room",
+    "image": "SeenRoom"
   },
   "privateRoom": {
-    "text": "Une private room est une room privé lancé par un utilisateur et ses abonnées. Seuls ces derniers y ont accès. Le but, créer des espaces d’échanges entre amis sur des thèmes et créneaux choisis.",
-    "image": "SeenRoom"
+    "starting": "",
+    "text": "Le visionnage d'une 'room' permet aux utilisateurs de suivre en direct ou en différé les discussions et échanges se déroulant dans une salle virtuelle dédiée à une thématique spécifique.",
+    "text2": "",
+    "starting2": "",
+    "image": "InRoomTalk"
   }
 }

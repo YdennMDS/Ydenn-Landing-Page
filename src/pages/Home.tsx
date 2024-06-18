@@ -10,7 +10,7 @@ import roomData from "../data/roomData.json";
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const roomInfo = isOpen ? roomData.openRoom : roomData.privateRoom;
+  const roomInfo = isOpen ? roomData.privateRoom : roomData.openRoom;
 
   return (
     <div>
@@ -38,7 +38,7 @@ function Home() {
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex items-center justify-center">
-          <img src={Images.Illustration1} alt="" />
+          <img className="w-4/5 md:w-auto" src={Images.Illustration1} alt="" />
         </div>
       </div>
       <div className="w-full h-auto py-10 gap-10 md:py-0 md:gap-0 md:h-[449px] bg-[#F5F5F5] flex flex-col md:flex-row items-center justify-center">
@@ -109,26 +109,17 @@ function Home() {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-center items-center">
-            <div>
-              <img
-                src={Images[roomInfo.image]}
-                alt=""
-                className="mt-20 lg:ml-24"
-              />
+            <div className="mt-20 lg:ml-24 w-[300px] h-[550px]">
+              <img src={Images[roomInfo.image]} alt="room info" />
             </div>
             <div className="w-4/5 lg:w-[672px] h-auto min-h-[446px] border border-[#52525B80] rounded-2xl lg:ml-24 flex items-center flex-col lg:items-start">
               <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start">
-                <span className="text-[#444444]">Une open room</span> est une
-                room dans laquelle une discussion à lieu avec un nombre
-                d’utilisateurs définis pouvant interagir et le reste des
-                utilisateurs non inscrit peuvent quant à eux assister à
-                l'échange sans écrire et cette fois sans limite.
+                <span className="text-[#444444]">{roomInfo.starting} </span>
+                {roomInfo.text}
               </p>
               <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start">
-                <span className="text-[#444444]">Une private room</span> est une
-                room privé lancé par un utilisateur et ses abonnées. Seuls ces
-                derniers y ont accès. Le but, créer des espaces d’échanges entre
-                amis sur des thèmes et créneaux choisis.
+                <span className="text-[#444444]">{roomInfo.starting2} </span>
+                {roomInfo.text2}
               </p>
               <CustomButton
                 text="Je m'inscris"
