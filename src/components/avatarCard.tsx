@@ -11,7 +11,7 @@ function avatarCard({ imageLink, name, customStyles }: Props) {
     >
       <img src={imageLink} alt="" className="absolute" />
       <div>
-        <h3 className="font-medium sm:text-xl text-[40px] lg:text-[40px] text-[#111111] left-7 top-7 absolute">
+        <h3 className="font-medium sm:text-xl text-[40px] lg:text-[40px] text-[#111111] left-7 top-7 absolute font-inter">
           {name}
         </h3>
       </div>

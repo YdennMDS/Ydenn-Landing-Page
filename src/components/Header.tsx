@@ -12,7 +12,7 @@ function Header() {
           <li>
             <a
               href="/"
-              className="font-medium text-[10px] lg:text-base text-black"
+              className="font-medium text-[10px] lg:text-base text-black font-inter"
             >
               Accueil
             </a>
@@ -20,7 +20,7 @@ function Header() {
           <li>
             <a
               href="/avatar"
-              className="font-medium text-[10px] lg:text-base text-black"
+              className="font-medium text-[10px] lg:text-base text-black font-inter"
             >
               Créer votre avatar
             </a>
@@ -28,7 +28,7 @@ function Header() {
           <li>
             <a
               href="/contact"
-              className="font-medium text-[10px] lg:text-base text-black"
+              className="font-medium text-[10px] lg:text-base text-black font-inter"
             >
               Contact
             </a>

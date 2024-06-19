@@ -5,7 +5,9 @@ interface Props {
 
 function CustomButton({ text, customStyles }: Props) {
   return (
-    <button className={`h-[50px] font-bold text-xs md:text-sm ${customStyles}`}>
+    <button
+      className={`h-[50px] font-bold text-xs md:text-sm ${customStyles} font-inter`}
+    >
       {text}
     </button>
   );
