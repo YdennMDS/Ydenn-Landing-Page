@@ -7,7 +7,7 @@ function Header() {
       <div className="w-1/5 flex justify-center">
         <img src={Images.logo_ydenn} alt="" />
       </div>
-      <nav className="lg:ml-24 w-2/5">
+      <nav className="lg:ml-24 w-2/5 flex flex-row items-center justify-center">
         <ul className="flex flex-row gap-10">
           <li>
             <a

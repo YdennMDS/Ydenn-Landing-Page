@@ -53,27 +53,21 @@ function Footer() {
           </svg>
         </div>
       </div>
-      <div className="footer-col2">
-        <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
-          <li className="font-bold text-xs sm:text-base">Légal</li>
-          <li className="text-xs sm:text-base">Conditions d'utilisation</li>
-          <li className="text-xs sm:text-base">Mention Légales</li>
-        </ul>
-      </div>
-      <div className="footer-col3">
-        <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
-          <li className="font-bold text-xs sm:text-base">Menu</li>
-          <li className="text-xs sm:text-base">La plateforme</li>
-          <li className="text-xs sm:text-base">Les Rooms</li>
-        </ul>
-      </div>
-      <div className="footer-col4">
-        <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
-          <li className="font-bold text-xs sm:text-base">Contact</li>
-          <li className="text-xs sm:text-base">ydenn.contact@gmail.com</li>
-          <li className="text-xs sm:text-base">Numéro de téléphone</li>
-        </ul>
-      </div>
+      <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
+        <li className="font-bold text-xs sm:text-base">Légal</li>
+        <li className="text-xs sm:text-base">Conditions d'utilisation</li>
+        <li className="text-xs sm:text-base">Mention Légales</li>
+      </ul>
+      <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
+        <li className="font-bold text-xs sm:text-base">Menu</li>
+        <li className="text-xs sm:text-base">La plateforme</li>
+        <li className="text-xs sm:text-base">Les Rooms</li>
+      </ul>
+      <ul className="gap-5 sm:gap-10 flex flex-row lg:flex-col">
+        <li className="font-bold text-xs sm:text-base">Contact</li>
+        <li className="text-xs sm:text-base">ydenn.contact@gmail.com</li>
+        <li className="text-xs sm:text-base">06XXXXXXXX</li>
+      </ul>
     </footer>
   );
 }

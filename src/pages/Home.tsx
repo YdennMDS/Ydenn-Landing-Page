@@ -142,26 +142,22 @@ function Home() {
           <AvatarCard
             imageLink={Images.Curieux}
             name="Le curieux"
-            description=""
             customStyles="bg-[#B7CAD8]"
           />
           <AvatarCard
             imageLink={Images.Initiateur}
             name="L'initiateur"
-            description="Lorem"
-            customStyles="bg-[#F0F0F0]"
+            customStyles="bg-[#DDE5E7]"
           />
           <AvatarCard
             imageLink={Images.Discret}
             name="Le discret"
-            description="Lorem"
-            customStyles="bg-[#211BB080]"
+            customStyles="bg-[#DBCFDD]"
           />
           <AvatarCard
             imageLink={Images.Mediateur}
             name="Le médiateur"
-            description="Lorem"
-            customStyles="bg-[#B8C8FF]"
+            customStyles="bg-[#E3E1EF]"
           />
         </div>
         <div className="flex justify-center py-20 pb-40">
@@ -228,7 +224,7 @@ function Home() {
             <textarea
               name="message"
               id="message"
-              className="border border-[#D0D5DD] w-full md:w-[480px] h-[128px] rounded-lg resize-none"
+              className="border border-[#D0D5DD] w-full md:w-[480px] h-[128px] rounded-lg resize-none p-3"
             ></textarea>
           </label>
           <label className="font-normal text-base text-[#667085] w-4/5 lg:w-1/3 lg:pl-4">
