@@ -19,7 +19,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="/avatar"
+              href="#avatar"
               className="font-medium text-[10px] lg:text-base text-black font-inter"
             >
               Créer votre avatar
@@ -27,7 +27,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="/contact"
+              href="#fourth-section"
               className="font-medium text-[10px] lg:text-base text-black font-inter"
             >
               Contact
@@ -38,6 +38,7 @@ function Header() {
       <div className="flex flex-row justify-center w-[30%] sm:w-1/5">
         <CustomButton
           text={"Je m'inscris"}
+          redirectUrl="#fourth-section"
           customStyles={
             "bg-[#211BB0] w-[70%] sm:w-[168px] text-white mx-2 sm:mx-4"
           }

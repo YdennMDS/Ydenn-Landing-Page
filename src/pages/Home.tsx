@@ -33,6 +33,7 @@ function Home() {
             </p>
             <CustomButton
               text={"Rejoindre notre communauté"}
+              redirectUrl="#fourth-section"
               customStyles="bg-[#211BBF] w-3/5 sm:w-[385px] text-white text-xl"
             />
           </div>
@@ -139,13 +140,14 @@ function Home() {
               </p>
               <CustomButton
                 text="Je m'inscris"
+                redirectUrl="#fourth-section"
                 customStyles="bg-[#211BBF] w-[205px] h-[64px] text-white text-xl flex-start flex items-center justify-center mb-5 md:mb-0 lg:ml-20"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F5F5F5]">
+      <div id="avatar" className="w-full bg-[#F5F5F5]">
         <div className="flex flex-col items-center py-20">
           <h3 className="text-[#4343EF] font-semibold text-base md:text-[19px] font-montserrat">
             Avatar YDENN
@@ -179,6 +181,7 @@ function Home() {
         <div className="flex justify-center py-20 pb-40">
           <CustomButton
             text="Je commence le test"
+            redirectUrl="/"
             customStyles="bg-[#211BBF] w-[220px] lg:w-[301px] h-[64px] text-white text-xl flex items-center justify-center"
           />
         </div>
