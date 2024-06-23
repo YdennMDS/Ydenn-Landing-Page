@@ -38,12 +38,16 @@ function Home() {
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex items-center justify-center">
-          <img className="w-4/5 md:w-auto" src={Images.Illustration1} alt="" />
+          <img
+            className="w-4/5 md:w-auto"
+            src={Images.Illustration1}
+            alt="Illustration"
+          />
         </div>
       </div>
       <div className="w-full h-auto py-10 gap-10 md:py-0 md:gap-0 md:h-[449px] bg-[#F5F5F5] flex flex-col md:flex-row items-center justify-center">
         <div className="flex flex-col items-center max-w-[327px] h-[273px] gap-10 mx-8">
-          <img src={Icons.Message} alt="" className="size-16" />
+          <img src={Icons.Message} alt="Icon message" className="size-16" />
           <h3 className="text-[#212121] font-bold text-2xl text-center font-poppins">
             Les rooms de discussion
           </h3>
@@ -52,7 +56,7 @@ function Home() {
           </p>
         </div>
         <div className="flex flex-col items-center max-w-[327px] h-[273px] gap-10 mx-8">
-          <img src={Icons.Avatar} alt="" className="size-16" />
+          <img src={Icons.Avatar} alt="icon avatar" className="size-16" />
           <h3 className="text-[#212121] font-bold text-2xl text-center font-poppins">
             Création d’avatar
           </h3>
@@ -61,7 +65,11 @@ function Home() {
           </p>
         </div>{" "}
         <div className="flex flex-col items-center max-w-[327px] h-[273px] gap-10 mx-8">
-          <img src={Icons.Moderation} alt="" className="size-16" />
+          <img
+            src={Icons.Moderation}
+            alt="icon modération"
+            className="size-16"
+          />
           <h3 className="text-[#212121] font-bold text-2xl text-center font-poppins">
             Modération automatique
           </h3>

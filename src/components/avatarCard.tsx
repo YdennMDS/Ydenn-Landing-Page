@@ -9,9 +9,9 @@ function avatarCard({ imageLink, name, customStyles }: Props) {
     <div
       className={`${customStyles} w-full sm:w-1/4 h-[424px] relative flex items-center justify-center`}
     >
-      <img src={imageLink} alt="" className="absolute" />
+      <img src={imageLink} alt={"image" + name} className="absolute" />
       <div>
-        <h3 className="font-medium sm:text-xl text-[40px] lg:text-[40px] text-[#111111] left-7 top-7 absolute font-inter">
+        <h3 className="font-medium sm:text-xl text-[40px] lg:text-[40px] text-[#111111] left-7 top-2 sm:top-7 absolute font-inter">
           {name}
         </h3>
       </div>

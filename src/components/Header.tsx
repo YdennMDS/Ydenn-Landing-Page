@@ -5,10 +5,10 @@ function Header() {
   return (
     <header className="flex flex-row h-24 border-b border-[#EFEFEF] items-center">
       <div className="w-1/5 flex justify-center">
-        <img src={Images.logo_ydenn} alt="" />
+        <img src={Images.logo_ydenn} alt="logo ydenn" />
       </div>
-      <nav className="lg:ml-24 w-2/5 flex flex-row items-center justify-center">
-        <ul className="flex flex-row gap-10">
+      <nav className="lg:ml-24 w-[50%] sm:w-3/5 flex flex-row items-center">
+        <ul className="flex flex-row gap-5 sm:gap-10">
           <li>
             <a
               href="/"
@@ -35,15 +35,17 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div className="flex flex-row justify-center w-2/5">
+      <div className="flex flex-row justify-center w-[30%] sm:w-1/5">
         <CustomButton
           text={"Je m'inscris"}
-          customStyles={"bg-[#211BB0] w-[168px] text-white mx-4"}
+          customStyles={
+            "bg-[#211BB0] w-[70%] sm:w-[168px] text-white mx-2 sm:mx-4"
+          }
         />
-        <CustomButton
+        {/* <CustomButton
           text={"Créer votre avatar"}
           customStyles="border-2 border-[#111111] w-[177px] text-black"
-        />
+        /> */}
       </div>
     </header>
   );
