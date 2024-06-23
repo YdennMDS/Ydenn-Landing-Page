@@ -1,9 +1,11 @@
+import Images from "../constants/Images";
+
 function Footer() {
   return (
     <footer className="w-full min-h-[420px] h-auto bg-black flex flex-col lg:flex-row justify-around items-center text-white font-inter">
       <div className="flex flex-row items-center lg:items-start lg:flex-col gap-3 sm:gap-5 md:gap-10 lg:gap-0">
         <div>
-          <img className="w-24" src="/logo_ydenn.png" alt="logo ydenn" />
+          <img className="w-24" src={Images.logo_footer} alt="logo ydenn" />
         </div>
         <div className="sm:w-[296px] mt-2">
           <p className="text-white font-normal text-sm text-center lg:text-start sm:text-base">

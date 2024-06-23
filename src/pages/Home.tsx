@@ -20,7 +20,7 @@ function Home() {
           <img
             src={Images.Dot}
             alt=""
-            className="absolute -z-10 top-[420px] left-[68px]"
+            className="absolute -z-10 top-[485px] left-[68px] w-[196px] h-[154px]"
           />
           <div className="h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
             <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-10 text-center lg:text-start font-inter">
@@ -40,7 +40,7 @@ function Home() {
         </div>
         <div className="w-full lg:w-1/2 flex items-center justify-center">
           <img
-            className="w-4/5 md:w-auto"
+            className="w-4/5 md:w-[510px] h-[415px]"
             src={Images.Illustration1}
             alt="Illustration"
           />

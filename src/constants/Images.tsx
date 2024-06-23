@@ -1,12 +1,13 @@
-import Dot from "../assets/Dot.svg";
-import Illustration1 from "../assets/Illustration1.svg";
+import Dot from "../assets/Dot.png";
+import Illustration1 from "../assets/Illustration1.png";
 import logo_ydenn from "../assets/LOGO-YDENN-NOIR 1.svg";
-import Curieux from "../assets/curieux.svg";
-import Discret from "../assets/discret.svg";
-import InRoomTalk from "../assets/inRoomTalk.svg";
-import Initiateur from "../assets/initiateur.svg";
-import Mediateur from "../assets/mediateur.svg";
-import SeenRoom from "../assets/seenRoom.svg";
+import Curieux from "../assets/curieux.png";
+import Discret from "../assets/discret.png";
+import InRoomTalk from "../assets/inRoomTalk.png";
+import Initiateur from "../assets/initiateur.png";
+import logo_footer from "../assets/logo_footer.png";
+import Mediateur from "../assets/mediateur.png";
+import SeenRoom from "../assets/seenRoom.png";
 
 interface Images {
   [key: string]: string;
@@ -19,6 +20,7 @@ interface Images {
   Initiateur: string;
   Discret: string;
   Mediateur: string;
+  logo_footer: string;
 }
 
 const images: Images = {
@@ -31,6 +33,7 @@ const images: Images = {
   Initiateur,
   Discret,
   Mediateur,
+  logo_footer,
 };
 
 export default images;
