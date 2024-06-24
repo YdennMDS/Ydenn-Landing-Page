@@ -17,14 +17,14 @@ function Home() {
       <Header />
       <div className="flex flex-col lg:flex-row min-h-[650px] my-20">
         <div className="w-full lg:w-1/2 flex justify-center items-center flex-col">
-          <img
+          {/* <img
             src={Images.Dot}
             alt=""
             className="absolute -z-10 lg:top-[485px] lg:left-[68px] w-[196px] h-[154px]"
-          />
+          /> */}
           <div className="h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
-            <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-10 text-center lg:text-start font-inter">
-              YDENN, une plateforme de discussion qui révolutionne le débat{" "}
+            <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-6 sm:leading-10 text-center lg:text-start font-inter">
+              YDENN, une plateforme de discussion qui révolutionne le débat.
             </h1>
             <p className="font-normal text-sm mx-2 md:mx-20 lg:mx-0 lg:text-xl my-12 text-center lg:text-start font-dmSans text-[#565656]">
               Une plateforme accessible à tous de manière anonyme et sécurisée,
