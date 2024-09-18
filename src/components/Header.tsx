@@ -40,7 +40,7 @@ function Header() {
           text={"Je m'inscris"}
           redirectUrl="#fourth-section"
           customStyles={
-            "bg-[#211BB0] w-[70%] sm:w-[168px] text-white mx-2 sm:mx-4"
+            "bg-[#211BB0] w-[70%] sm:w-[168px] text-white mx-2 sm:mx-4 rounded-[30px]"
           }
         />
         {/* <CustomButton

@@ -17,11 +17,6 @@ function Home() {
       <Header />
       <div className="flex flex-col lg:flex-row min-h-[650px] my-20">
         <div className="w-full lg:w-1/2 flex justify-center items-center flex-col">
-          {/* <img
-            src={Images.Dot}
-            alt=""
-            className="absolute -z-10 lg:top-[485px] lg:left-[68px] w-[196px] h-[154px]"
-          /> */}
           <div className="h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
             <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-6 sm:leading-10 text-center lg:text-start font-inter">
               YDENN, une plateforme de discussion qui révolutionne le débat.
@@ -34,7 +29,7 @@ function Home() {
             <CustomButton
               text={"Rejoindre notre communauté"}
               redirectUrl="#fourth-section"
-              customStyles="bg-[#211BBF] w-3/5 sm:w-[385px] text-white text-xl"
+              customStyles="bg-[#211BBF] w-3/5 sm:w-[385px] text-white text-xl rounded-[30px]"
             />
           </div>
         </div>
@@ -141,7 +136,7 @@ function Home() {
               <CustomButton
                 text="Je m'inscris"
                 redirectUrl="#fourth-section"
-                customStyles="bg-[#211BBF] w-[205px] h-[64px] text-white text-xl flex-start flex items-center justify-center mb-5 md:mb-0 lg:ml-20"
+                customStyles="bg-[#211BBF] w-[205px] h-[64px] text-white text-xl flex-start flex items-center justify-center mb-5 md:mb-0 lg:ml-20 rounded-[30px]"
               />
             </div>
           </div>
@@ -155,34 +150,39 @@ function Home() {
           <h2 className="text-[#24242E] text-xl md:text-[29px] font-bold font-montserrat">
             Créer votre propre avatar
           </h2>
+          <p className="font-normal text-xl text-[#565656] mt-10 mx-8 lg:mx-72 text-center">
+            Une plateforme accessible à tous de manière anonyme et sécurisée,
+            afin de permettre à chacun de vivre une expérience de réseau social
+            centrée sur la qualité des échanges
+          </p>
         </div>
         <div className="w-full flex flex-col sm:flex-row">
           <AvatarCard
             imageLink={Images.Curieux}
             name="Le curieux"
-            customStyles="bg-[#B7CAD8]"
+            customStyles="shadow-custom-left"
           />
           <AvatarCard
             imageLink={Images.Initiateur}
             name="L'initiateur"
-            customStyles="bg-[#DDE5E7]"
+            customStyles="shadow-custom-left"
           />
           <AvatarCard
             imageLink={Images.Discret}
             name="Le discret"
-            customStyles="bg-[#DBCFDD]"
+            customStyles="shadow-custom-left"
           />
           <AvatarCard
             imageLink={Images.Mediateur}
             name="Le médiateur"
-            customStyles="bg-[#E3E1EF]"
+            customStyles="shadow-custom-left"
           />
         </div>
         <div className="flex justify-center py-20 pb-40">
           <CustomButton
             text="Je commence le test"
-            redirectUrl="/"
-            customStyles="bg-[#211BBF] w-[220px] lg:w-[301px] h-[64px] text-white text-xl flex items-center justify-center"
+            redirectUrl="/survey"
+            customStyles="bg-[#211BBF] w-[220px] lg:w-[301px] h-[64px] text-white text-xl flex items-center justify-center rounded-[30px]"
           />
         </div>
       </div>
