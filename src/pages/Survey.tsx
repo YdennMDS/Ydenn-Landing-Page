@@ -18,13 +18,16 @@ export default function Survey() {
     <div className="max-h-screen h-screen w-full bg-slate-100 flex flex-col items-center">
       <div className="flex flex-row h-[100px] w-full bg-white mb-12">
         <div className="flex flex-row items-center">
-          <div className="flex items-center justify-center rounded-full w-[50px] h-[50px] bg-[#F8F8F8] cursor-pointer ml-20">
+          <a
+            href="/"
+            className="flex items-center justify-center rounded-full w-[50px] h-[50px] bg-[#F8F8F8] cursor-pointer ml-20"
+          >
             <img
               src={Icons.LeftArrow}
               alt="left arrow"
               className="w-4 h-[14px]"
             />
-          </div>
+          </a>
           <h3 className="font-medium text-base ml-8">Créer votre avatar</h3>
         </div>
         <div className="w-2/3 flex items-center justify-center ml-8">
@@ -65,7 +68,7 @@ export default function Survey() {
           </div>
         </div>
         <div className="flex items-center my-14">
-          <h2 className="text-black font-bold text-[40px] font-inter">
+          <h2 className="text-black font-bold text-[40px] font-inter text-center">
             Mes amis disent de moi que je suis...
           </h2>
         </div>

@@ -5,6 +5,7 @@ import Curieux from "../assets/curieux.png";
 import Discret from "../assets/discret.png";
 import InRoomTalk from "../assets/inRoomTalk.png";
 import Initiateur from "../assets/initiateur.png";
+import Initiateur2 from "../assets/initiateur_2.png";
 import ItemsList from "../assets/items_list.png";
 import logo_footer from "../assets/logo_footer.png";
 import YdennLogoFull from "../assets/logo_ydenn_noir_full.png";
@@ -20,6 +21,7 @@ interface Images {
   SeenRoom: string;
   Curieux: string;
   Initiateur: string;
+  Initiateur2: string;
   Discret: string;
   Mediateur: string;
   logo_footer: string;
@@ -35,6 +37,7 @@ const images: Images = {
   SeenRoom,
   Curieux,
   Initiateur,
+  Initiateur2,
   Discret,
   Mediateur,
   logo_footer,

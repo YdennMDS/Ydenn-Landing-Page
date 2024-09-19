@@ -7,13 +7,16 @@ export default function YourAvatar() {
     <div className="max-h-screen h-screen w-full bg-slate-100 flex flex-col items-center">
       <div className="flex flex-row h-[100px] w-full bg-white mb-12">
         <div className="flex flex-row items-center">
-          <div className="flex items-center justify-center rounded-full w-[50px] h-[50px] bg-[#F8F8F8] cursor-pointer ml-20">
+          <a
+            href="/"
+            className="flex items-center justify-center rounded-full w-[50px] h-[50px] bg-[#F8F8F8] cursor-pointer ml-20"
+          >
             <img
               src={Icons.LeftArrow}
               alt="left arrow"
               className="w-4 h-[14px]"
             />
-          </div>
+          </a>
           <h3 className="font-medium text-base ml-8">Créer votre avatar</h3>
         </div>
         <div className="w-2/3 flex items-center justify-center ml-[60px]">
@@ -53,29 +56,27 @@ export default function YourAvatar() {
             </h3>
           </div>
         </div>
-        <div className="flex items-center my-14">
-          <h2 className="text-black font-bold text-[40px] font-inter">
+        <div className="flex items-center mt-14">
+          <h2 className="text-black font-bold text-[40px] font-inter text-center">
             Félicitations vous êtes <span>"INITIATEUR"</span>
           </h2>
         </div>
-        <div className="flex flex-col items-center">
-          <div>
+        <div className="flex flex-col items-center mt-4">
+          <div className="flex flex-col items-center">
             <img
-              src={Images.Initiateur}
+              src={Images.Initiateur2}
               alt=""
               className="w-[338px] h-[341px]"
             />
-          </div>
-          <div>
             <img
               src={Images.ItemsList}
               alt=""
-              className="w-[805px] h-[117px]"
+              className="w-[805px] h-[117px] relative bottom-16"
             />
           </div>
-          <div>
-            <p>
-              <span>
+          <div className="mx-4 sm:mx-64">
+            <p className="text-center font-normal font-inter text-[22px] text-black">
+              <span className="font-bold">
                 Vous venez de débloquer votre premier item grâce à votre
                 inscription.
               </span>{" "}
@@ -85,7 +86,7 @@ export default function YourAvatar() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row w-full items-center justify-center my-20">
+      <div className="flex flex-row w-full items-center justify-center my-8">
         <CustomButton
           text={"Retour à l'accueil"}
           redirectUrl={"/"}
