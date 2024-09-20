@@ -36,17 +36,18 @@ function Header() {
         </ul>
       </nav>
       <div className="flex flex-row justify-center w-[30%] sm:w-1/5">
-        <CustomButton
+        {/* <CustomButton
           text={"Je m'inscris"}
           redirectUrl="#fourth-section"
           customStyles={
             "bg-[#211BB0] w-[70%] sm:w-[168px] text-white mx-2 sm:mx-4 rounded-[30px]"
           }
-        />
-        {/* <CustomButton
-          text={"Créer votre avatar"}
-          customStyles="border-2 border-[#111111] w-[177px] text-black"
         /> */}
+        <CustomButton
+          text={"Créer votre avatar"}
+          redirectUrl="#fourth-section"
+          customStyles="border-2 border-[#111111] w-[177px] text-black rounded-[30px]"
+        />
       </div>
     </header>
   );

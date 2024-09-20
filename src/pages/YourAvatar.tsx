@@ -1,8 +1,21 @@
+import { useLocation } from "react-router-dom";
 import CustomButton from "../components/CustomButton";
 import Icons from "../constants/Icons";
 import Images from "../constants/Images";
 
+type ProfileType = "Initiateur" | "Discret" | "Curieux" | "Médiateur";
+
 export default function YourAvatar() {
+  const location = useLocation();
+  const profile = location.state.profile as ProfileType;
+
+  const profileImages = {
+    Initiateur: Images.Initiateur2,
+    Discret: Images.Discret,
+    Curieux: Images.Curieux,
+    Médiateur: Images.Mediateur,
+  };
+
   return (
     <div className="max-h-screen h-screen w-full bg-slate-100 flex flex-col items-center">
       <div className="flex flex-row h-[100px] w-full bg-white mb-12">
@@ -58,14 +71,14 @@ export default function YourAvatar() {
         </div>
         <div className="flex items-center mt-14">
           <h2 className="text-black font-bold text-[40px] font-inter text-center">
-            Félicitations vous êtes <span>"INITIATEUR"</span>
+            Félicitations vous êtes <span>{profile.toUpperCase()}</span>
           </h2>
         </div>
         <div className="flex flex-col items-center mt-4">
           <div className="flex flex-col items-center">
             <img
-              src={Images.Initiateur2}
-              alt=""
+              src={profileImages[profile]}
+              alt={profile}
               className="w-[338px] h-[341px]"
             />
             <img

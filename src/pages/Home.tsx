@@ -133,11 +133,11 @@ function Home() {
                 <span className="text-[#444444]">{roomInfo.starting2} </span>
                 {roomInfo.text2}
               </p>
-              <CustomButton
+              {/* <CustomButton
                 text="Je m'inscris"
                 redirectUrl="#fourth-section"
                 customStyles="bg-[#211BBF] w-[205px] h-[64px] text-white text-xl flex-start flex items-center justify-center mb-5 md:mb-0 lg:ml-20 rounded-[30px]"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ function Home() {
               Soyez le premier prévenu lors du lancement de l’application
             </h4>
           </div>
-          <div className="flex flex-col md:flex-row gap-8 w-4/5 md:w-auto">
+          {/* <div className="flex flex-col md:flex-row gap-8 w-4/5 md:w-auto">
             <label className="font-medium text-sm text-[#344054] flex flex-col gap-2 font-inter">
               Prénom
               <input
@@ -226,7 +226,7 @@ function Home() {
                 required
               />
             </label>
-          </div>
+          </div> */}
           <label className="font-medium text-sm text-[#344054] flex flex-col gap-2 w-4/5 md:w-auto font-inter">
             Email
             <input

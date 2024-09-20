@@ -3,15 +3,77 @@ import { useNavigate } from "react-router-dom";
 import CustomInput from "../components/CustomInput";
 import Icons from "../constants/Icons";
 import Images from "../constants/Images";
+import questionsData from "../data/questions.json";
+
+interface Question {
+  text: string;
+  options: string[];
+}
+
+interface QuestionsData {
+  questions: Question[];
+}
 
 export default function Survey() {
   const navigate = useNavigate();
 
-  const [selectedText, setSelectedText] = useState<string | null>(null);
-  const buttonCondition = !selectedText;
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
+  const [answers, setAnswers] = useState<string[]>([]);
 
-  const handleSelect = (text: string) => {
-    setSelectedText(text);
+  const data: QuestionsData = questionsData as QuestionsData;
+
+  const currentQuestion = data.questions[currentQuestionIndex];
+
+  const buttonCondition = !answers;
+
+  if (!currentQuestion) {
+    return <div>Loading questions...</div>;
+  }
+
+  const handleSelect = (answer: string) => {
+    const newAnswers = [...answers];
+    newAnswers[currentQuestionIndex] = answer;
+    setAnswers(newAnswers);
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < data.questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      // const profile = calculateProfile(answers);
+      // navigate("/youravatar", { state: { profile } });
+      navigate("/yourcontact", {
+        state: { profile: calculateProfile(answers) },
+      });
+    }
+  };
+
+  const calculateProfile = (answers: string[]): string => {
+    const counts = { Discret: 0, Initiateur: 0, Curieux: 0, Médiateur: 0 };
+    answers.forEach((answer) => {
+      switch (answer.charAt(0)) {
+        case "A":
+          counts.Discret += 1;
+          break;
+        case "B":
+          counts.Initiateur += 1;
+          break;
+        case "C":
+          counts.Curieux += 1;
+          break;
+        case "D":
+          counts.Médiateur += 1;
+          break;
+        default:
+          break;
+      }
+    });
+
+    return Object.keys(counts).reduce((a, b) =>
+      counts[a as keyof typeof counts] > counts[b as keyof typeof counts]
+        ? a
+        : b
+    );
   };
 
   return (
@@ -69,32 +131,31 @@ export default function Survey() {
         </div>
         <div className="flex items-center my-14">
           <h2 className="text-black font-bold text-[40px] font-inter text-center">
-            Mes amis disent de moi que je suis...
+            {currentQuestion.text}
           </h2>
         </div>
       </div>
       <div className="flex flex-col gap-8 items-center w-full">
-        {[
-          "A. Introvertis, timide.",
-          "B. Extraverti, force de proposition",
-          "C. Introvertis, timide.",
-          "D. Introvertis, timide.",
-        ].map((text) => (
-          <div
-            key={text}
-            onClick={() => handleSelect(text)}
-            className="w-full max-w-[1070px] cursor-pointer"
-          >
-            <CustomInput Text={text} isSelected={selectedText === text} />
-          </div>
-        ))}
+        {currentQuestion.options ? (
+          currentQuestion.options.map((option, index) => (
+            <CustomInput
+              key={index}
+              text={option}
+              onSelect={() => handleSelect(option)}
+              isSelected={answers[currentQuestionIndex] === option}
+            />
+          ))
+        ) : (
+          <p>Aucune option disponible.</p>
+        )}
       </div>
       <div className="flex flex-row w-full items-center justify-center my-20">
-        <button
+        {/* <button
           disabled={buttonCondition}
-          onClick={() => {
-            navigate("/yourcontact");
-          }}
+          // onClick={() => {
+          //   navigate("/yourcontact");
+          // }}
+          onClick={handleNextQuestion}
           className={`font-bold md:text-sm ${
             buttonCondition
               ? "bg-[#E5E5E5] text-[#00000026]"
@@ -102,6 +163,18 @@ export default function Survey() {
           } w-[471px] lg:w-[301px] h-[64px] text-xl flex items-center justify-center rounded-[30px] font-inter`}
         >
           Suivant
+        </button> */}
+        <button
+          onClick={handleNextQuestion}
+          className={`font-bold md:text-sm ${
+            buttonCondition
+              ? "bg-[#E5E5E5] text-[#00000026]"
+              : "bg-[#211BB2] text-white"
+          } w-[471px] lg:w-[301px] h-[64px] text-xl flex items-center justify-center rounded-[30px] font-inter`}
+        >
+          {currentQuestionIndex < data.questions.length - 1
+            ? "Suivant"
+            : "Voir le profil"}
         </button>
       </div>
     </div>

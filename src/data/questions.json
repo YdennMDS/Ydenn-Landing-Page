@@ -1,0 +1,49 @@
+{
+  "questions": [
+    {
+      "text": "Mes amis disent de moi que je suis...",
+      "options": [
+        "A. Introvertis, timide.",
+        "B. Extraverti, force de proposition.",
+        "C. Avide de savoir, intéressé.",
+        "D. Diplomate, empathique."
+      ]
+    },
+    {
+      "text": "Comment réagissez-vous généralement lors d'un débat en ligne ?",
+      "options": [
+        "A. Je me fais ma propre opinion sans la partager aux autres.",
+        "B. Je m'implique activement et je n'hésite pas à donner mon avis.",
+        "C. J'essaie de poser des questions pour approfondir la discussion.",
+        "D. J'interviens seulement pour calmer les esprits."
+      ]
+    },
+    {
+      "text": "Quelle est votre principale motivation lorsque vous participez à une conversation en ligne ?",
+      "options": [
+        "A. Comprendre les différents points de vue sans forcément m’impliquer.",
+        "B. Apprendre des choses nouvelles et découvrir des idées auxquelles je n'avais pas pensé.",
+        "C. Exprimer mes opinions et défendre mes convictions.",
+        "D. Faciliter un dialogue respectueux en veillant à ce que chacun se sente écouté."
+      ]
+    },
+    {
+      "text": "Comment réagissez-vous lorsque quelqu'un partage une opinion très différente de la vôtre ?",
+      "options": [
+        "A. Je réfléchis à ses arguments, même si je préfère ne pas réagir immédiatement.",
+        "B. Je respecte son point de vue mais je pose des questions pour mieux comprendre sa perspective.",
+        "C. Je n’hésite pas à répondre pour défendre mes idées ou corriger ce que je perçois comme des erreurs.",
+        "D. J'essaie de trouver un terrain d'entente pour éviter que la discussion ne devienne conflictuelle."
+      ]
+    },
+    {
+      "text": "Quel type de valeurs sont les plus importantes pour vous dans vos interactions avec les autres ?",
+      "options": [
+        "A. Respect: Il est essentiel pour moi de respecter les limites des autres sans imposer mes idées.",
+        "B. Leadership: J'accorde beaucoup d'importance à affirmer mes opinions et de guider les discussions.",
+        "C. Apprentissage: Pour moi, il est fondamental de rester ouvert aux nouvelles idées et d’apprendre constamment des autres.",
+        "D. Équité: Je valorise la capacité à trouver un terrain d’entente et à maintenir des échanges respectueux et pacifiques."
+      ]
+    }
+  ]
+}

@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Icons from "../constants/Icons";
 import Images from "../constants/Images";
 
 export default function YourContact() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const profile = location.state?.profile || "";
 
   const user_emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -99,7 +102,7 @@ export default function YourContact() {
         <button
           disabled={buttonCondition}
           onClick={() => {
-            navigate("/youravatar");
+            navigate("/youravatar", { state: { profile } });
           }}
           className={`font-bold md:text-sm ${
             buttonCondition
