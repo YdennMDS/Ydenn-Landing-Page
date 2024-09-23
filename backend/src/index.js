@@ -12,13 +12,12 @@ connectDB();
 
 app.use(
   cors({
-    origin: "https://ydenn.fr",
+    origin: process.env.ALLOWED_ORIGINS,
     methods: ["POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-// app.use(cors());
 app.use(express.json());
 
 const profilRoute = require("./api/routes/profilRoute");
