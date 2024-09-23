@@ -46,7 +46,7 @@ function Header() {
         <CustomButton
           text={"Créer votre avatar"}
           redirectUrl="#fourth-section"
-          customStyles="border-2 border-[#111111] w-[177px] text-black rounded-[30px]"
+          customStyles="border-2 border-[#111111] sm:w-[177px] text-black rounded-[30px]"
         />
       </div>
     </header>

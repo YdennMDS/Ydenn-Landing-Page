@@ -40,8 +40,6 @@ export default function Survey() {
     if (currentQuestionIndex < data.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      // const profile = calculateProfile(answers);
-      // navigate("/youravatar", { state: { profile } });
       navigate("/yourcontact", {
         state: { profile: calculateProfile(answers) },
       });
@@ -77,12 +75,12 @@ export default function Survey() {
   };
 
   return (
-    <div className="max-h-screen h-screen w-full bg-slate-100 flex flex-col items-center">
+    <div className="h-auto min-h-screen w-full bg-slate-100 flex flex-col items-center">
       <div className="flex flex-row h-[100px] w-full bg-white mb-12">
         <div className="flex flex-row items-center">
           <a
             href="/"
-            className="flex items-center justify-center rounded-full w-[50px] h-[50px] bg-[#F8F8F8] cursor-pointer ml-20"
+            className="flex items-center justify-center rounded-full w-[50px] h-[50px] bg-[#F8F8F8] cursor-pointer ml-4 sm:ml-20"
           >
             <img
               src={Icons.LeftArrow}
@@ -90,9 +88,11 @@ export default function Survey() {
               className="w-4 h-[14px]"
             />
           </a>
-          <h3 className="font-medium text-base ml-8">Créer votre avatar</h3>
+          <h3 className="font-medium text-xs sm:text-base ml-2 sm:ml-8">
+            Créer votre avatar
+          </h3>
         </div>
-        <div className="w-2/3 flex items-center justify-center ml-8">
+        <div className="sm:w-2/3 flex items-center justify-center ml-8">
           <img
             src={Images.YdennLogoFull}
             alt="logo ydenn"
@@ -103,34 +103,34 @@ export default function Survey() {
       <div className="flex flex-col items-center">
         <div className="flex flex-row items-center">
           <div className="flex flex-col items-center gap-2 -mr-8">
-            <span className="border-2 border-[#A1AEBE] rounded-full w-8 h-8 flex items-center justify-center text-base font-medium text-[#242E39] bg-white">
+            <span className="border-2 border-[#A1AEBE] rounded-full w-8 h-8 flex items-center justify-center text-xs sm:text-base font-medium text-[#242E39] bg-white relative">
               01
             </span>
-            <h3 className="text-[#465668] font-medium text-xl font-inter">
+            <h3 className="text-[#465668] font-medium text-sm sm:text-xl font-inter">
               Questionnaire
             </h3>
           </div>
-          <span className="h-0.5 w-[200px] bg-[#A1AEBE] flex mb-8"></span>
+          <span className="h-0.5 w-[100px] sm:w-[200px] bg-[#A1AEBE] flex mb-8"></span>
           <div className="flex flex-col items-center gap-2 -mx-12">
-            <span className="border-2 border-[#A1AEBE] rounded-full w-8 h-8 flex items-center justify-center text-base font-medium text-[#242E39] bg-white">
+            <span className="border-2 border-[#A1AEBE] rounded-full w-8 h-8 flex items-center justify-center text-xs sm:text-base font-medium text-[#242E39] bg-white relative">
               02
             </span>
-            <h3 className="text-[#465668] font-medium text-xl font-inter">
+            <h3 className="text-[#465668] font-medium text-sm sm:text-xl font-inter">
               Vos coordonnées
             </h3>
           </div>
-          <span className="h-0.5 w-[200px] bg-[#A1AEBE] flex mb-8"></span>
+          <span className="h-0.5 w-[100px] sm:w-[200px] bg-[#A1AEBE] flex mb-8"></span>
           <div className="flex flex-col items-center gap-2 -ml-6">
-            <span className="border-2 border-[#A1AEBE] rounded-full w-8 h-8 flex items-center justify-center text-base font-medium text-[#242E39] bg-white">
+            <span className="border-2 border-[#A1AEBE] rounded-full w-8 h-8 flex items-center justify-center text-xs sm:text-base font-medium text-[#242E39] bg-white relative">
               03
             </span>
-            <h3 className="text-[#465668] font-medium text-xl font-inter">
+            <h3 className="text-[#465668] font-medium text-sm sm:text-xl font-inter">
               Votre avatar
             </h3>
           </div>
         </div>
         <div className="flex items-center my-14">
-          <h2 className="text-black font-bold text-[40px] font-inter text-center">
+          <h2 className="text-black font-bold text-[26px] sm:text-[30px] md:text-[34px] lg:text-[40px] font-inter text-center mx-1">
             {currentQuestion.text}
           </h2>
         </div>
@@ -150,27 +150,13 @@ export default function Survey() {
         )}
       </div>
       <div className="flex flex-row w-full items-center justify-center my-20">
-        {/* <button
-          disabled={buttonCondition}
-          // onClick={() => {
-          //   navigate("/yourcontact");
-          // }}
-          onClick={handleNextQuestion}
-          className={`font-bold md:text-sm ${
-            buttonCondition
-              ? "bg-[#E5E5E5] text-[#00000026]"
-              : "bg-[#211BB2] text-white"
-          } w-[471px] lg:w-[301px] h-[64px] text-xl flex items-center justify-center rounded-[30px] font-inter`}
-        >
-          Suivant
-        </button> */}
         <button
           onClick={handleNextQuestion}
           className={`font-bold md:text-sm ${
             buttonCondition
               ? "bg-[#E5E5E5] text-[#00000026]"
               : "bg-[#211BB2] text-white"
-          } w-[471px] lg:w-[301px] h-[64px] text-xl flex items-center justify-center rounded-[30px] font-inter`}
+          } w-[301px] lg:w-[471px] h-[64px] text-xl flex items-center justify-center rounded-[30px] font-inter`}
         >
           {currentQuestionIndex < data.questions.length - 1
             ? "Suivant"

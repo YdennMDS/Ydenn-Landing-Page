@@ -1,0 +1,53 @@
+version: "3.8"
+services:
+  frontend:
+    container_name: ydenn_landing_frontend
+    image: node:alpine
+    working_dir: /srv/app
+    command: ["sh", "-c", "npm install && npm run build"]
+    volumes:
+      - type: bind
+        source: ./frontend
+        target: /srv/app
+    tty: true
+
+  backend:
+    container_name: ydenn_landing_backend
+    image: node:alpine
+    working_dir: /home/node/app
+    env_file:
+      - ./backend/.env
+    command: ["sh", "-c", "npm install && node index.js"]
+    volumes:
+      - type: bind
+        source: ./backend/src
+        target: /home/node/app
+      - type: bind
+        source: ./certs/api.alcma.fr
+        target: /etc/nginx/certs/api.alcma.fr
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+
+  ydenn_nginx-1:
+    image: nginx:latest
+    volumes:
+      - type: bind
+        source: ./frontend/dist
+        target: /usr/share/nginx/html
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+      - type: bind
+        source: ./certs/alcma.fr
+        target: /etc/nginx/certs/alcma.fr
+      - type: bind
+        source: ./certs/api.alcma.fr
+        target: /etc/nginx/certs/api.alcma.fr
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - frontend
+      - backend
