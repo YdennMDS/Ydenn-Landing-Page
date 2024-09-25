@@ -2,6 +2,7 @@ import { useState } from "react";
 import CustomButton from "../components/CustomButton";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import MobileRoomSelector from "../components/MobileRoomSelector";
 import AvatarCard from "../components/avatarCard";
 import Icons from "../constants/Icons";
 import Images from "../constants/Images";
@@ -15,9 +16,9 @@ function Home() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col lg:flex-row min-h-[650px] my-20">
+      <div className="flex flex-col lg:flex-row min-h-[650px] mt-20 mb-16">
         <div className="w-full lg:w-1/2 flex justify-center items-center flex-col">
-          <div className="h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
+          <div className="h-[400px] sm:h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
             <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-6 sm:leading-10 text-center lg:text-start font-inter">
               YDENN, une plateforme de discussion qui révolutionne le débat.
             </h1>
@@ -31,6 +32,13 @@ function Home() {
               redirectUrl="#fourth-section"
               customStyles="bg-[#211BBF] w-3/5 sm:w-[385px] text-white text-xl rounded-[30px]"
             />
+            <div className="flex sm:hidden mt-5">
+              <CustomButton
+                text={"Créer votre avatar"}
+                redirectUrl="#test"
+                customStyles="border-2 border-[#111111] w-[197px] text-black rounded-[30px]"
+              />
+            </div>
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex items-center justify-center">
@@ -84,7 +92,7 @@ function Home() {
           </h2>
         </div>
         <div className="w-full pb-10 lg:pb-0">
-          <div className="flex flex-col items-center lg:items-start lg:flex-row justify-center w-full gap-3 lg:gap-0">
+          <div className="hidden sm:flex flex-col items-center lg:items-start lg:flex-row justify-center w-full gap-3 lg:gap-0">
             <div
               className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-start gap-3"
               onClick={() => setIsOpen(false)}
@@ -120,8 +128,9 @@ function Home() {
               ></span>
             </div>
           </div>
+          <MobileRoomSelector onOptionChange={setIsOpen} />
           <div className="flex flex-col lg:flex-row justify-center items-center">
-            <div className="mt-20 lg:ml-24 w-[300px] h-[550px]">
+            <div className="mt-12 sm:mt-20 lg:ml-24 w-[300px] h-[480px] sm:h-[550px]">
               <img src={Images[roomInfo.image]} alt="room info" />
             </div>
             <div className="w-4/5 lg:w-[672px] h-auto min-h-[446px] border border-[#52525B80] rounded-2xl lg:ml-24 flex items-center flex-col lg:items-start">
@@ -133,30 +142,25 @@ function Home() {
                 <span className="text-[#444444]">{roomInfo.starting2} </span>
                 {roomInfo.text2}
               </p>
-              {/* <CustomButton
-                text="Je m'inscris"
-                redirectUrl="#fourth-section"
-                customStyles="bg-[#211BBF] w-[205px] h-[64px] text-white text-xl flex-start flex items-center justify-center mb-5 md:mb-0 lg:ml-20 rounded-[30px]"
-              /> */}
             </div>
           </div>
         </div>
       </div>
       <div id="avatar" className="w-full bg-[#F5F5F5]">
         <div className="flex flex-col items-center py-20">
-          <h3 className="text-[#4343EF] font-semibold text-base md:text-[19px] font-montserrat">
+          <h3 className="text-[#4343EF] font-semibold text-sm md:text-[19px] font-montserrat">
             Avatar YDENN
           </h3>
-          <h2 className="text-[#24242E] text-xl md:text-[29px] font-bold font-montserrat">
+          <h2 className="text-[#24242E] text-2xl md:text-[29px] font-bold font-montserrat">
             Créer votre propre avatar
           </h2>
-          <p className="font-normal text-xl text-[#565656] mt-10 mx-8 lg:mx-72 text-center">
+          <p className="font-normal text-sm sm:text-xl text-[#565656] mt-10 mx-8 lg:mx-72 text-center">
             Une plateforme accessible à tous de manière anonyme et sécurisée,
             afin de permettre à chacun de vivre une expérience de réseau social
             centrée sur la qualité des échanges
           </p>
         </div>
-        <div className="w-full flex flex-col sm:flex-row">
+        <div id="test" className="w-full flex flex-wrap md:flex-row">
           <AvatarCard
             imageLink={Images.Curieux}
             name="Le curieux"
@@ -178,7 +182,7 @@ function Home() {
             customStyles="shadow-custom-left"
           />
         </div>
-        <div className="flex justify-center py-20 pb-40">
+        <div className="flex justify-center py-20 pb-28 md:pb-40">
           <CustomButton
             text="Je commence le test"
             redirectUrl="/survey"
@@ -193,7 +197,7 @@ function Home() {
         <form
           action="https://formspree.io/f/xnqkenlo"
           method="POST"
-          className="flex flex-col items-center gap-5 py-20 bg-[#FFFFFF] w-4/5 rounded-2xl"
+          className="flex flex-col items-center gap-5 py-20 bg-[#FFFFFF] w-full sm:w-4/5 rounded-2xl"
         >
           <div className="w-4/5 lg:w-1/3 lg:ml-8">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold text-[#101828] font-poppins">
@@ -261,7 +265,7 @@ function Home() {
           </label>
           <button
             type="submit"
-            className="w-4/5 md:w-[480px] h-12 rounded-lg bg-black text-white"
+            className="w-4/5 md:w-[480px] h-12 rounded-[30px] bg-[#211BB0] text-white"
           >
             Envoyer un message
           </button>
