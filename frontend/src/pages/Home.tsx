@@ -20,7 +20,7 @@ function Home() {
         <div className="w-full lg:w-1/2 flex justify-center items-center flex-col">
           <div className="h-[400px] sm:h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
             <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-6 sm:leading-10 text-center lg:text-start font-inter">
-              YDENN, une plateforme de discussion qui révolutionne le débat.
+              YDENN, une plateforme de discussion qui révolutionne le débat
             </h1>
             <p className="font-normal text-sm mx-2 md:mx-20 lg:mx-0 lg:text-xl my-12 text-center lg:text-start font-dmSans text-[#565656]">
               Une plateforme accessible à tous de manière anonyme et sécurisée,
@@ -28,17 +28,10 @@ function Home() {
               social centrée sur la qualité des échanges
             </p>
             <CustomButton
-              text={"Rejoindre notre communauté"}
-              redirectUrl="#fourth-section"
-              customStyles="bg-[#211BBF] w-3/5 sm:w-[385px] text-white text-xl rounded-[30px]"
+              text={"Créer votre avatar"}
+              redirectUrl="#test"
+              customStyles="bg-[#FFFFFF] w-3/5 sm:w-[278px] sm:h-[64px] text-xl rounded-[30px] border-2 border-black"
             />
-            <div className="flex sm:hidden mt-5">
-              <CustomButton
-                text={"Créer votre avatar"}
-                redirectUrl="#test"
-                customStyles="border-2 border-[#111111] w-[197px] text-black rounded-[30px]"
-              />
-            </div>
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex items-center justify-center">
@@ -51,7 +44,11 @@ function Home() {
       </div>
       <div className="w-full h-auto py-10 gap-10 md:py-0 md:gap-0 md:h-[449px] bg-[#F5F5F5] flex flex-col md:flex-row items-center justify-center">
         <div className="flex flex-col items-center max-w-[327px] h-[273px] gap-10 mx-8">
-          <img src={Icons.Message} alt="Icon message" className="size-16" />
+          <img
+            src={Icons.Message}
+            alt="Icon message"
+            className="size-[104px]"
+          />
           <h3 className="text-[#212121] font-bold text-2xl text-center font-poppins">
             Les rooms de discussion
           </h3>
@@ -60,7 +57,7 @@ function Home() {
           </p>
         </div>
         <div className="flex flex-col items-center max-w-[327px] h-[273px] gap-10 mx-8">
-          <img src={Icons.Avatar} alt="icon avatar" className="size-16" />
+          <img src={Icons.Avatar} alt="icon avatar" className="size-[104px]" />
           <h3 className="text-[#212121] font-bold text-2xl text-center font-poppins">
             Création d’avatar
           </h3>
@@ -72,7 +69,7 @@ function Home() {
           <img
             src={Icons.Moderation}
             alt="icon modération"
-            className="size-16"
+            className="size-[104px]"
           />
           <h3 className="text-[#212121] font-bold text-2xl text-center font-poppins">
             Modération automatique
@@ -94,7 +91,7 @@ function Home() {
         <div className="w-full pb-10 lg:pb-0">
           <div className="hidden sm:flex flex-col items-center lg:items-start lg:flex-row justify-center w-full gap-3 lg:gap-0">
             <div
-              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-start gap-3"
+              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[22%] items-center lg:items-start gap-3"
               onClick={() => setIsOpen(false)}
             >
               <h3
@@ -111,7 +108,7 @@ function Home() {
               ></span>
             </div>
             <div
-              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[21%] items-center lg:items-end gap-3"
+              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[22%] items-center lg:items-end gap-3"
               onClick={() => setIsOpen(true)}
             >
               <h3
@@ -134,16 +131,23 @@ function Home() {
               <img src={Images[roomInfo.image]} alt="room info" />
             </div>
             <div className="w-4/5 lg:w-[672px] h-auto min-h-[446px] border border-[#52525B80] rounded-2xl lg:ml-24 flex items-center flex-col lg:items-start">
-              <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start font-inter">
+              <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start font-inter leading-7">
                 <span className="text-[#444444]">{roomInfo.starting} </span>
                 {roomInfo.text}
               </p>
-              <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start font-inter">
+              <p className="text-[#777777] text-sm lg:text-[17px] font-semibold mx-10 lg:mx-20 my-10 text-start font-inter leading-7">
                 <span className="text-[#444444]">{roomInfo.starting2} </span>
                 {roomInfo.text2}
               </p>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center py-6 pb-20">
+          <CustomButton
+            text="Une question ? Nous sommes là pour vous"
+            redirectUrl="#fourth-section"
+            customStyles="bg-[#211BBF] w-[220px] lg:w-[531px] h-[64px] text-white text-xl flex items-center justify-center rounded-[30px]"
+          />
         </div>
       </div>
       <div id="avatar" className="w-full bg-[#F5F5F5]">
@@ -184,9 +188,9 @@ function Home() {
         </div>
         <div className="flex justify-center py-20 pb-28 md:pb-40">
           <CustomButton
-            text="Je commence le test"
+            text="Je commence le test pour créer mon avatar"
             redirectUrl="/survey"
-            customStyles="bg-[#211BBF] w-[220px] lg:w-[301px] h-[64px] text-white text-xl flex items-center justify-center rounded-[30px]"
+            customStyles="bg-white w-[220px] lg:w-[551px] h-[64px] text-xl flex items-center justify-center rounded-[30px] border-2 border-black text-center"
           />
         </div>
       </div>
@@ -199,42 +203,19 @@ function Home() {
           method="POST"
           className="flex flex-col items-center gap-5 py-20 bg-[#FFFFFF] w-full sm:w-4/5 rounded-2xl"
         >
-          <div className="w-4/5 lg:w-1/3 lg:ml-8">
+          <div className="w-4/5 lg:ml-8">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold text-[#101828] font-poppins">
-              Inscrivez vous
+              Intéressé par les débats constructifs sur YDENN ?
             </h2>
             <h4 className="font-medium text-[#565C69] text-sm sm:text-base md:text-lg lg:text-xl my-5 w-full font-inter">
-              Soyez le premier prévenu lors du lancement de l’application
+              Envoyez-nous un message, et nous vous répondrons dans les
+              meilleurs délais.
             </h4>
           </div>
-          {/* <div className="flex flex-col md:flex-row gap-8 w-4/5 md:w-auto">
-            <label className="font-medium text-sm text-[#344054] flex flex-col gap-2 font-inter">
-              Prénom
-              <input
-                className="border border-[#D0D5DD] md:w-[224px] h-[48px] rounded-lg text-[#667085] pl-3"
-                type="text"
-                name="firstname"
-                id="firstname"
-                placeholder="Prénom"
-                required
-              />
-            </label>
-            <label className="font-medium text-sm text-[#344054] flex flex-col gap-2 font-inter">
-              Nom
-              <input
-                className="border border-[#D0D5DD] md:w-[224px] h-[48px] rounded-lg text-[#667085] pl-3"
-                type="text"
-                name="lastname"
-                id="lastname"
-                placeholder="Nom"
-                required
-              />
-            </label>
-          </div> */}
           <label className="font-medium text-sm text-[#344054] flex flex-col gap-2 w-4/5 md:w-auto font-inter">
             Email
             <input
-              className="w-full md:w-[480px] h-[48px] rounded-lg border border-[#D0D5DD] text-[#667085] pl-3"
+              className="w-full md:w-[480px] lg:w-[1064px] h-[48px] rounded-lg border border-[#D0D5DD] text-[#667085] pl-3"
               type="email"
               name="email"
               id="email"
@@ -247,10 +228,10 @@ function Home() {
             <textarea
               name="message"
               id="message"
-              className="border border-[#D0D5DD] w-full md:w-[480px] h-[128px] rounded-lg resize-none p-3"
+              className="border border-[#D0D5DD] w-full md:w-[480px] lg:w-[1064px] h-[128px] rounded-lg resize-none p-3"
             ></textarea>
           </label>
-          <label className="font-normal text-base text-[#667085] w-4/5 lg:w-1/3 lg:pl-4">
+          <label className="font-normal text-base text-[#667085] w-4/5 lg:pl-4">
             <input
               type="checkbox"
               name="checkform"
@@ -265,7 +246,7 @@ function Home() {
           </label>
           <button
             type="submit"
-            className="w-4/5 md:w-[480px] h-12 rounded-[30px] bg-[#211BB0] text-white"
+            className="w-4/5 md:w-[480px] lg:w-[1064px] h-12 rounded-[30px] bg-[#211BB0] text-white"
           >
             Envoyer un message
           </button>
