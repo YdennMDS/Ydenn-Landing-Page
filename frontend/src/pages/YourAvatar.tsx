@@ -10,7 +10,7 @@ export default function YourAvatar() {
   const profile = location.state.profile as ProfileType;
 
   const profileImages = {
-    Initiateur: Images.Initiateur2,
+    Initiateur: Images.Initiateur,
     Discret: Images.Discret,
     Curieux: Images.Curieux,
     Médiateur: Images.Mediateur,

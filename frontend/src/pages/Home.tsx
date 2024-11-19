@@ -16,7 +16,7 @@ function Home() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col lg:flex-row min-h-[650px] mt-20 mb-16">
+      <div className="flex flex-col lg:flex-row min-h-[650px] sm:min-h-[450px] mt-20 mb-16">
         <div className="w-full lg:w-1/2 flex justify-center items-center flex-col">
           <div className="h-[400px] sm:h-[425px] md:w-[587px] flex flex-col items-center lg:items-start">
             <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-6 sm:leading-10 text-center lg:text-start font-inter">
@@ -30,13 +30,13 @@ function Home() {
             <CustomButton
               text={"Créer votre avatar"}
               redirectUrl="#test"
-              customStyles="bg-[#FFFFFF] w-3/5 sm:w-[278px] sm:h-[64px] text-xl rounded-[30px] border-2 border-black"
+              customStyles="bg-[#FFFFFF] w-3/5 sm:w-[278px] sm:h-[64px] lg:text-xl rounded-[30px] border-2 border-black font-semibold"
             />
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex items-center justify-center">
           <img
-            className="w-4/5 object-contain md:w-[510px] md:h-[415px]"
+            className="w-4/5 object-contain md:w-[510px] md:h-[415px] rounded-[52px]"
             src={Images.Illustration1}
             alt="Illustration"
           />
@@ -91,7 +91,7 @@ function Home() {
         <div className="w-full pb-10 lg:pb-0">
           <div className="hidden sm:flex flex-col items-center lg:items-start lg:flex-row justify-center w-full gap-3 lg:gap-0">
             <div
-              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[22%] items-center lg:items-start gap-3"
+              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[26%] items-center lg:items-start gap-3"
               onClick={() => setIsOpen(false)}
             >
               <h3
@@ -108,7 +108,7 @@ function Home() {
               ></span>
             </div>
             <div
-              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[22%] items-center lg:items-end gap-3"
+              className="flex flex-col w-4/5 sm:w-1/2 lg:w-[26%] items-center lg:items-end gap-3"
               onClick={() => setIsOpen(true)}
             >
               <h3
@@ -116,7 +116,7 @@ function Home() {
                   isOpen ? "text-black" : "text-[#7E818A]"
                 } font-medium text-base sm:text-xl md:text-2xl lg:text-3xl cursor-pointer font-poppins`}
               >
-                Visionnage d’une rooms
+                Visionnage dans les rooms
               </h3>
               <span
                 className={`w-full h-1 flex ease-out transition-all duration-500 ${
@@ -142,11 +142,11 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center py-6 pb-20">
+        <div className="flex justify-center pb-20">
           <CustomButton
             text="Une question ? Nous sommes là pour vous"
             redirectUrl="#fourth-section"
-            customStyles="bg-[#211BBF] w-[220px] lg:w-[531px] h-[64px] text-white text-xl flex items-center justify-center rounded-[30px]"
+            customStyles="bg-[#211BBF] w-[220px] lg:w-[531px] h-[64px] text-white lg:text-xl flex items-center justify-center rounded-[30px]"
           />
         </div>
       </div>
@@ -164,33 +164,40 @@ function Home() {
             centrée sur la qualité des échanges
           </p>
         </div>
-        <div id="test" className="w-full flex flex-wrap md:flex-row">
+        <div
+          id="test"
+          className="w-full flex flex-wrap md:flex-row justify-center gap-6"
+        >
           <AvatarCard
             imageLink={Images.Curieux}
             name="Le curieux"
-            customStyles="shadow-custom-left"
+            description="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+            customStyles=""
           />
           <AvatarCard
             imageLink={Images.Initiateur}
             name="L'initiateur"
-            customStyles="shadow-custom-left"
+            description="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+            customStyles=""
           />
           <AvatarCard
             imageLink={Images.Discret}
             name="Le discret"
-            customStyles="shadow-custom-left"
+            description="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+            customStyles=""
           />
           <AvatarCard
             imageLink={Images.Mediateur}
             name="Le médiateur"
-            customStyles="shadow-custom-left"
+            description="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+            customStyles=""
           />
         </div>
-        <div className="flex justify-center py-20 pb-28 md:pb-40">
+        <div className="flex justify-center py-20 pb-28 md:pb-24">
           <CustomButton
             text="Je commence le test pour créer mon avatar"
             redirectUrl="/survey"
-            customStyles="bg-white w-[220px] lg:w-[551px] h-[64px] text-xl flex items-center justify-center rounded-[30px] border-2 border-black text-center"
+            customStyles="bg-white w-[220px] lg:w-[551px] h-[64px] lg:text-xl flex items-center justify-center rounded-[30px] border-2 border-black text-center font-bold"
           />
         </div>
       </div>
@@ -201,7 +208,7 @@ function Home() {
         <form
           action="https://formspree.io/f/xnqkenlo"
           method="POST"
-          className="flex flex-col items-center gap-5 py-20 bg-[#FFFFFF] w-full sm:w-4/5 rounded-2xl"
+          className="flex flex-col items-center gap-5 py-10 bg-[#FFFFFF] w-full sm:w-4/5 rounded-2xl"
         >
           <div className="w-4/5 lg:ml-8">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-semibold text-[#101828] font-poppins">
@@ -246,7 +253,7 @@ function Home() {
           </label>
           <button
             type="submit"
-            className="w-4/5 md:w-[480px] lg:w-[1064px] h-12 rounded-[30px] bg-[#211BB0] text-white"
+            className="w-4/5 md:w-[480px] lg:w-[1064px] h-12 rounded-[30px] bg-[#211BB0] text-white text-xl font-inter font-normal"
           >
             Envoyer un message
           </button>

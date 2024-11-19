@@ -8,7 +8,7 @@ function CustomButton({ text, customStyles, redirectUrl }: Props) {
   return (
     <a
       href={redirectUrl}
-      className={`h-[50px] flex items-center justify-center font-bold text-xs md:text-sm ${customStyles} font-inter`}
+      className={`h-[50px] flex items-center justify-center text-xs md:text-sm ${customStyles} font-inter`}
     >
       {text}
     </a>
