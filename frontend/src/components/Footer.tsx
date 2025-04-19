@@ -15,7 +15,7 @@ function Footer() {
           </p>
         </div>
         <div className="lg:mt-12 flex flex-col gap-3 sm:gap-0 items-center sm:flex-row">
-          {/* <a href="https://www.linkedin.com/company/105489437">
+          <a href="https://www.linkedin.com/company/ydenn">
             <svg
               className="mx-2 cursor-pointer w-5 sm:w-auto"
               xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +29,8 @@ function Footer() {
                 fill="white"
               />
             </svg>
-          </a> */}
-          <a href="https://www.instagram.com/_ydenn_">
+          </a>
+          <a href="https://www.instagram.com/ydenn__">
             <img src={Icons.Instagram} alt="" className="size-14" />
           </a>
         </div>
